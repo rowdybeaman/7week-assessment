@@ -1,0 +1,6 @@
+The doublerAppend array used the .push method and the doublerInsert uses the .unshift method, it appears the smaller array that the Insert unshift method is a little faster, though at numbers this small it would never be a noticeable difference. However, it seems as the array gets bigger that doublerAppend scales at a much better rate. The arrays tiny and small the Insert unshift method was faster but medium-xlarge the .push method became faster, and it appears as the array continues to grow the difference between them will as well. After doint a bit of online research to understand why, the .push method is a liner progression (O(1)) where as the .unshift can be O(n), but due to the need to shift all other elements it is O(n^2) for n elements.
+
+EXTRA CREDIT SECTION:
+
+ - .push increases with the size of the array linearly, 
+ - .unshift the realtive time increases quadratically with the size of the array so it will experiance exponential growth when far enough along. 
